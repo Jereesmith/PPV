@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOW PILAR</title>
+    <link rel="stylesheet" href="Css/normalize.css">    
+    <link rel="stylesheet" href="Css/style.css">
+    <script src="https://kit.fontawesome.com/f246deda58.js" crossorigin="anonymous"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+
+   <header>
+    <div class="box">
+        <figure>
+          <a href="https://www.instagram.com/flow.pilar/">
+            <img src="Imagenes/Imagen-icono1.jpeg" alt="Logo de FLOW PILAR"/>
+          </a>
+        </figure>
+    </div>
+
+        <h1>FLOW PILAR</h1>
+
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-cart"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                                <div class="info-cart-product">
+                                  <span
+                                  class="cantidad-producto-carrito">1</span>
+                                  <p class="titulo-producto-carrito">
+                                        z
+                                  </p> 
+                                  <span class="precio-producto-carrito">$0</span> 
+                                </div>
+                                <svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$0</span>
+                    <button id="checkout" class="checkout-btn">Comprar</button>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-1.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Air Force 1'07 WB</h2>
+                <p class="price">$1</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-2.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>FORUM 84 BB - “The First Café”</h2>
+                <p class="price">$2</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-3.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Airmax 1 Duck Pecan</h2>
+                <p class="price">$3</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-4.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Airforce 1 Low Swoosh Chain</h2>
+                <p class="price">$4</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-5.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Air Max 1 SC</h2>
+                <p class="price">$5</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-6.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Air Force 1 Low Retro</h2>
+                <p class="price">$6</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-7.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Air Force 1'07</h2>
+                <p class="price">$7</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-8.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike SB Dunk Low Pro </h2>
+                <p class="price">$8</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-9.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Dunk Low</h2>
+                <p class="price">$9</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+       
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-13.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Bad Bunny Forum-Easter Egg</h2>
+                <p class="price">$10</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-14.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Blazer Low '77 By You</h2>
+                <p class="price">$11</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img
+                    src="Imagenes/Imagen-15.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Nike Blazer Low 77</h2>
+                <p class="price">$12</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+   
+    <script src="index.js"></script>
+
+   <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+              <a href="#">
+                <img src="Imagenes/Imagen-icono1.jpeg" alt="Logo de FLOW PILAR"/>
+              </a>
+            </figure>
+        </div>
+        <div class="box">
+              <h2>SOBRE NOSOTROS</h2>
+              <p>Empresa de zapatillas importadas</p>
+              <p>Nos encargamos de realizar envios a todo el pais.
+                Todos los medios de envios
+              </p>
+              
+              <h2>CONTACTANOS</h2>
+            <div class="red-social">
+              <a href="https://wa.me/541170384681" class="fa fa-whatsapp"></a>
+              
+            </div>
+        </div>
+        
+        <div class="box">
+            <h2>SEGUINOS</h2>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/flow.pilar/" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+          <small>&copy; 2023 <b>Flow Pilar</b> - Todos los Derechos Reservados- </small>
+    </div>
+</footer>
+
+</body>
+</html>
